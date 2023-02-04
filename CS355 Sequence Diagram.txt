@@ -1,0 +1,20 @@
+title Johnny Sanchez CS355 Final Project
+
+participant Discord API
+participant User
+participant Server
+participant Pokemon GO API
+
+User->(1)Server:Browser requests "/" (root of our site)
+Server->(1)User: Sends 200 Okay, Returns main.html (form)
+User->(1)Server:User fills out form (supplies data: **pokemonData**) \nBrowser requests "/" (root of our site)
+
+Server->Discord API: ClientID + ClientSecret
+Discord API->Server: access/refresh token
+
+note over Server: Token is usable for X amount of time. \n (we will need to request a new token \n after X amount of time)
+
+Server ->Pokemon GO API: getPokemonData request
+
+Pokemon GO API ->Server: getPokemonData in json
+Pokemon GO API ->Server: Results

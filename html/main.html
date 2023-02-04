@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Pokemon GO Data</h2>
+
+<p>Choose the type of data you want to obtain from the Pokemon GO API.</p>
+
+<!--
+<label for="pID">Pokemon ID:</label>
+-->
+<!--
+<input type="number" id="pID" name="pID">
+-->
+<style>
+    body, form{
+        margin:20px auto;
+        max-width:800px;
+        overflow-x:hidden;
+    }
+    fieldset{
+        display: flex;
+    }
+    input#description{
+        flex-grow:50;
+        margin: 0 20px;
+    }
+</style>
+
+<form action="getPokemonData" method="get">
+  <label for="data">Data:</label>
+  <input list="pokemondata" name="pokemondata">
+  <datalist id="pokemondata">
+    <option value="Pokemon Name">
+    <option value="Pokemon Stats">
+    <option value="Pokemon Types">
+    <option value="Pokemon Evolutions">
+  </datalist>
+  <input type="submit" value="Search">
+</form>
+
+<!-- <body>
+    <form action = "getPokemonData" method="get">
+        <fieldset>
+            <label for="pokemondata">Data:</label>
+            <input id="pokemondata" name="pokemondata" type="text" />
+            <input type="submit" value="Search"/>
+        </fieldset>
+    </form>
+</body> -->
+
+
+</body>
+</html>
+
